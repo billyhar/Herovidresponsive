@@ -2,6 +2,7 @@
 <html>
  <head>
    <link rel="stylesheet" href="style.css">
+   <script src="iphone-inline-video.min.js"></script>
   </head>
 <body>
 <div class="video-container">
@@ -10,5 +11,16 @@
 	  <!-- <source src="HeroAnimated4K.webm" type="video/webm"> -->
 	</video>
 </div>
+
+<script>
+ var video = document.querySelector('video');
+ enableInlineVideo(video);
+
+ setTimeout(function () { video.play(); }, 1000);
+
+ enableInlineVideo(video, {
+	iPad: true
+});
+</script>
 </body>
 </html>
